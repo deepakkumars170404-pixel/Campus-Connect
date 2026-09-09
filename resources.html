@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Connect — Study Resources</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="common.css" rel="stylesheet">
+<link href="resources.css" rel="stylesheet">
+</head>
+<body>
+
+<video class="bg-video" autoplay muted loop playsinline poster="https://assets.mixkit.co/videos/4566/4566-thumb-360-0.jpg">
+  <source src="https://assets.mixkit.co/videos/4566/4566-360.mp4" type="video/mp4">
+</video>
+<div class="bg-overlay"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="full d-flex flex-wrap align-items-center justify-content-between">
+    <a class="navbar-brand" href="home.html">Campus Connect</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse flex-grow-0" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="announcements.html">Announcements</a></li>
+        <li class="nav-item"><a class="nav-link" href="students.html">Student Profiles</a></li>
+        <li class="nav-item"><a class="nav-link active" href="resources.html">Study Resources</a></li>
+        <li class="nav-item"><a class="nav-link" href="calendar.html">Academic Calendar</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="full">
+    <div class="eyebrow">Campus Connect</div>
+    <h1 class="display-5 mt-2">Study Resources</h1>
+    <p class="mx-auto" style="max-width:560px;color:#e7e2f4">Notes, question papers, video lectures, and reference reading in one place.</p>
+  </div>
+</header>
+
+<main class="full py-5">
+  <input id="searchInput" type="text" class="form-control search-box mb-4" placeholder="Search resources by subject, semester, or topic...">
+
+  <div class="row g-4" id="resourceGrid">
+
+    <div class="col-md-4 res-item" data-tag="data structures algorithms notes dsa">
+      <div class="card res-card glass h-100 p-3">
+        <span class="badge res-tag tag-notes">📄 PDF Notes</span>
+        <h3 class="fw-bold mt-2">Data Structures &amp; Algorithms</h3>
+        <p class="text-muted flex-grow-1">Unit 1 to 5 complete handwritten &amp; digital lecture notes with code explanations.</p>
+        <a href="notes/dsa-complete-notes.pdf" download class="btn btn-brand btn-sm">📥 Download PDF Notes</a>
+      </div>
+    </div>
+
+    <div class="col-md-4 res-item" data-tag="dbms question paper qp">
+      <div class="card res-card glass h-100 p-3">
+        <span class="badge res-tag tag-qp">📝 Question Paper</span>
+        <h3 class="fw-bold mt-2">DBMS Nov/Dec 2025 QP</h3>
+        <p class="text-muted flex-grow-1">Previous year end-semester question paper with solved 2-mark answer key.</p>
+        <a href="https://drive.google.com" target="_blank" rel="noopener" class="btn btn-outline-warning btn-sm">👁️ View Question Paper</a>
+      </div>
+    </div>
+
+    <div class="col-md-4 res-item" data-tag="python basics video lecture tutorial">
+      <div class="card res-card glass h-100 p-3">
+        <span class="badge res-tag tag-video">🎥 Video Lecture</span>
+        <h3 class="fw-bold mt-2">Python Basics Tutorial</h3>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        </div>
+        <p class="text-muted flex-grow-1">Watch the full Python programming video directly here.</p>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener" class="btn btn-outline-danger btn-sm">▶️ Watch on YouTube</a>
+      </div>
+    </div>
+
+    <div class="col-md-4 res-item" data-tag="operating system concepts ebook reference">
+      <div class="card res-card glass h-100 p-3">
+        <span class="badge res-tag tag-book">📚 E-Book / Web Reference</span>
+        <h3 class="fw-bold mt-2">Operating System Concepts</h3>
+        <p class="text-muted flex-grow-1">Standard textbook online reading reference for process scheduling &amp; memory management.</p>
+        <a href="https://www.geeksforgeeks.org" target="_blank" rel="noopener" class="btn btn-brand btn-sm">🌐 Read E-Book Online</a>
+      </div>
+    </div>
+
+    <div class="col-md-4 res-item" data-tag="computer networks question paper qp">
+      <div class="card res-card glass h-100 p-3">
+        <span class="badge res-tag tag-qp">📝 Question Paper</span>
+        <h3 class="fw-bold mt-2">Computer Networks 2024 QP</h3>
+        <p class="text-muted flex-grow-1">Anna University model question paper set for practice.</p>
+        <a href="notes/cn-qp-2024.pdf" download class="btn btn-outline-warning btn-sm">📥 Download Question Paper</a>
+      </div>
+    </div>
+
+    <div class="col-md-4 res-item" data-tag="web development html css javascript playlist video">
+      <div class="card res-card glass h-100 p-3">
+        <span class="badge res-tag tag-video">🎥 Video Playlist</span>
+        <h3 class="fw-bold mt-2">Web Development Full Course</h3>
+        <p class="text-muted flex-grow-1">HTML, CSS, JavaScript complete tutorial playlist for beginners.</p>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener" class="btn btn-outline-danger btn-sm">▶️ Open Playlist</a>
+      </div>
+    </div>
+
+  </div>
+
+  <p id="noResults" class="text-center glass rounded p-4 d-none">No matching resource found.</p>
+</main>
+
+<footer class="py-3"><div class="full d-flex justify-content-between flex-wrap"><span>Campus Connect</span><span>Study Resources page</span></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="resources.js"></script>
+</body>
+</html>

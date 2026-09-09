@@ -1,0 +1,48 @@
+:root{
+  --indigo:#2b3a67; --teal:#1d7874; --gold:#d9a441; --plum:#5b3a7a;
+  --ink:#172033; --muted:#c9d2e8; --line:#dfe5ee;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#0c1526;color:var(--ink);font-family:"Segoe UI",Arial,sans-serif}
+a{text-decoration:none}
+
+/* layout */
+.full{width:100%;max-width:1600px;margin:0 auto;padding-left:5vw;padding-right:5vw}
+
+/* full-page background video — muted and darkened so it reads as a
+   professional backdrop behind every page, not just one hero */
+.bg-video{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
+  filter:saturate(.55) brightness(.5) contrast(1.05)}
+.bg-overlay{position:fixed;inset:0;z-index:-1;
+  background:linear-gradient(165deg,rgba(11,21,41,.88),rgba(43,58,103,.78) 55%,rgba(29,120,116,.72))}
+
+/* shared frosted-glass treatment so the video shows through every section */
+.glass{background:rgba(255,255,255,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.glass-dark{background:rgba(11,21,41,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff}
+
+/* navbar */
+.navbar{background:rgba(11,21,41,.72)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.08)}
+.navbar-brand{font-weight:800;color:#fff!important}
+.nav-link{color:#e3def0!important;font-weight:600}
+.nav-link.active,.nav-link:hover{color:var(--gold)!important}
+
+/* hero */
+.hero{position:relative;color:#fff;padding:100px 0 110px;text-align:center}
+.hero h1{font-weight:800}
+.eyebrow{color:var(--gold);text-transform:uppercase;font-weight:700;font-size:.8rem;letter-spacing:.04em}
+
+/* buttons */
+.btn-brand{background:linear-gradient(90deg,var(--indigo),var(--teal));color:#fff;border:0}
+.btn-brand:hover{background:linear-gradient(90deg,var(--plum),var(--indigo));color:#fff}
+
+/* section headings used on every content page */
+.section-title{color:#fff;font-weight:800}
+.section-sub{color:var(--muted)}
+
+/* footer */
+footer{background:rgba(11,21,41,.85);color:#dcd6ec;backdrop-filter:blur(10px);padding:22px 0;margin-top: 200px;}
+
+@media (max-width:650px){
+  .hero{padding:70px 0 84px}
+}

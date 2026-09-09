@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Connect — Academic Calendar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="common.css" rel="stylesheet">
+  <link href="calendar.css" rel="stylesheet">
+</head>
+<body>
+
+<video class="bg-video" autoplay muted loop playsinline poster="https://assets.mixkit.co/videos/4566/4566-thumb-360-0.jpg">
+  <source src="https://assets.mixkit.co/videos/4566/4566-360.mp4" type="video/mp4">
+</video>
+<div class="bg-overlay"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="full d-flex flex-wrap align-items-center justify-content-between">
+    <a class="navbar-brand" href="home.html">Campus Connect</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse flex-grow-0" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="announcements.html">Announcements</a></li>
+        <li class="nav-item"><a class="nav-link" href="students.html">Student Profiles</a></li>
+        <li class="nav-item"><a class="nav-link" href="resources.html">Study Resources</a></li>
+        <li class="nav-item"><a class="nav-link active" href="calendar.html">Academic Calendar</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="full">
+    <div class="eyebrow">DeepakGanesh · Campus Connect</div>
+    <h1 class="display-5 mt-2">Academic Calendar</h1>
+    <p class="mx-auto" style="max-width:560px;color:#e7e2f4">A ten-year calendar for classes, exams, holidays, and deadlines — 2026 to 2035.</p>
+  </div>
+</header>
+
+<main class="full py-5">
+
+  <div class="d-flex justify-content-end mb-3">
+    <button id="add-event" class="btn btn-brand">+ Add event</button>
+  </div>
+
+  <section class="controls glass rounded p-3 mb-3 d-flex align-items-center flex-wrap gap-2" aria-label="Calendar controls">
+    <button id="previous" class="btn btn-outline-secondary btn-sm" aria-label="Previous month">‹</button>
+    <h2 id="month-label" aria-live="polite" class="flex-grow-1 text-center fs-5 mb-0"></h2>
+    <button id="next" class="btn btn-outline-secondary btn-sm" aria-label="Next month">›</button>
+    <label class="ms-auto d-flex align-items-center gap-2 mb-0">Year
+      <select id="year-select" class="form-select form-select-sm" aria-label="Select year"></select>
+    </label>
+    <button id="today" class="btn btn-outline-secondary btn-sm">Today</button>
+  </section>
+
+  <section class="calendar-card glass rounded overflow-hidden">
+    <div class="weekdays"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+    <div id="calendar" class="calendar" aria-label="Monthly calendar"></div>
+  </section>
+
+  <section class="event-panel glass rounded mt-4 p-4">
+    <div class="d-flex justify-content-between align-items-baseline">
+      <div>
+        <p class="eyebrow mb-0" style="color:var(--cal-accent)">Your schedule</p>
+        <h2 class="fs-4 fw-bold mt-1">Upcoming events</h2>
+      </div>
+    </div>
+    <p id="empty-state" class="text-muted mt-3">No events yet. Add your first academic event.</p>
+    <ul id="event-list" class="list-unstyled mt-3 mb-0"></ul>
+  </section>
+
+</main>
+
+<footer class="py-3"><div class="full d-flex justify-content-between flex-wrap"><span>Campus Connect</span><span>Academic Calendar page by DeepakGanesh</span></div></footer>
+
+<dialog id="event-dialog">
+  <form id="event-form" method="dialog">
+    <div class="dialog-heading"><h2 id="dialog-title">Add event</h2><button type="button" id="close-dialog" class="icon-button" aria-label="Close">×</button></div>
+    <label>Event title<input id="event-title" required maxlength="80" placeholder="e.g. Midterm examination"></label>
+    <label>Date<input id="event-date" type="date" required min="2026-01-01" max="2035-12-31"></label>
+    <label>Notes <textarea id="event-notes" rows="3" maxlength="180" placeholder="Optional details"></textarea></label>
+    <div class="dialog-actions"><button type="button" id="cancel" class="btn btn-outline-secondary">Cancel</button><button class="btn btn-brand" value="default">Save event</button></div>
+  </form>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="calendar.js"></script>
+</body>
+</html>
