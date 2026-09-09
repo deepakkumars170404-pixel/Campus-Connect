@@ -1,0 +1,80 @@
+:root{
+  --indigo:#2b3a67; --teal:#1d7874; --gold:#d9a441; --plum:#5b3a7a;
+}
+body{background:#0c1526;font-family:"Segoe UI",Arial,sans-serif}
+
+/* full-page background video — muted and darkened so it reads as a
+   professional backdrop rather than a literal foreground clip */
+.bg-video{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
+  filter:saturate(.55) brightness(.5) contrast(1.05)}
+.bg-overlay{position:fixed;inset:0;z-index:-1;
+  background:linear-gradient(165deg,rgba(11,21,41,.88),rgba(43,58,103,.78) 55%,rgba(29,120,116,.72))}
+
+/* glass panel — the shared "frosted" treatment every section uses so the
+   video stays visible in soft focus behind all of them, not just the hero */
+.glass{background:rgba(255,255,255,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.glass-dark{background:rgba(11,21,41,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+
+/* navbar — frosted instead of solid, so the video shows through it too */
+.navbar{background:rgba(11,21,41,.72)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.08)}
+.navbar-brand{font-weight:800;color:#fff!important}
+.nav-link{color:#e3def0!important;font-weight:600}
+.nav-link.active,.nav-link:hover{color:var(--gold)!important}
+
+/* hero — fully transparent; the fixed video is the only background here */
+.hero{position:relative;color:#fff;padding:100px 0 120px}
+.hero h1{font-weight:800}
+
+/* full-width sections instead of Bootstrap's boxed container, with
+   comfortable side padding so the page reads edge-to-edge */
+.full{width:100%;max-width:1600px;margin:0 auto;padding-left:5vw;padding-right:5vw}
+footer{background:rgba(11,21,41,.85);color:#dcd6ec;backdrop-filter:blur(10px)}
+
+.stat-card{border:0;border-top:3px solid var(--gold);border-radius:.6rem;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.stat-card b{font-size:1.6rem;background:linear-gradient(90deg,var(--indigo),var(--teal));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+
+.control-bar{border-left:4px solid var(--gold);border-radius:.6rem;color:#fff}
+.control-bar small{color:#c9d2e8!important}
+.btn-brand{background:linear-gradient(90deg,var(--indigo),var(--teal));color:#fff;border:0}
+.btn-brand:hover{background:linear-gradient(90deg,var(--plum),var(--indigo));color:#fff}
+
+/* profile cards */
+.profile-card{border:0;border-radius:.7rem;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.3);
+  transition:transform .2s ease, box-shadow .2s ease}
+.profile-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.4)}
+.profile-card:hover .card-img-wrap i{transform:scale(1.15) rotate(-4deg)}
+.card-img-wrap i{transition:transform .3s ease}
+.card-img-wrap{position:relative;height:130px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.card-img-wrap::before{content:"";position:absolute;inset:-25%;
+  background:radial-gradient(circle at 22% 28%,rgba(255,255,255,.28),transparent 55%),
+             radial-gradient(circle at 82% 78%,rgba(255,255,255,.2),transparent 50%)}
+.card-img-wrap i{font-size:2.9rem;color:#fff;position:relative;z-index:2;text-shadow:0 4px 14px rgba(0,0,0,.25)}
+.panel-java{background:linear-gradient(135deg,#c0392b,#e07856)}
+.panel-python{background:linear-gradient(135deg,#2b6777,#52ab98)}
+.panel-fullstack{background:linear-gradient(135deg,var(--indigo),var(--teal))}
+.panel-analyst{background:linear-gradient(135deg,var(--plum),#8a5fa8)}
+.panel-science{background:linear-gradient(135deg,#1d7874,#3fae9c)}
+.panel-testing{background:linear-gradient(135deg,#a67c1f,var(--gold))}
+.panel-na{background:linear-gradient(135deg,#6b7280,#8892a6)}
+.avatar{width:52px;height:52px;margin-top:-42px;border:3px solid #fff;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),#f0c878);color:var(--indigo);display:flex;
+  align-items:center;justify-content:center;font-weight:800;position:relative;z-index:2;margin-left:16px}
+.course-badge{color:#fff;font-weight:600}
+.badge-java{background:linear-gradient(90deg,#c0392b,#e07856)}
+.badge-python{background:linear-gradient(90deg,#2b6777,#52ab98)}
+.badge-fullstack{background:linear-gradient(90deg,var(--indigo),var(--teal))}
+.badge-analyst{background:linear-gradient(90deg,var(--plum),#8a5fa8)}
+.badge-science{background:linear-gradient(90deg,#1d7874,#3fae9c)}
+.badge-testing{background:linear-gradient(90deg,#a67c1f,var(--gold))}
+.badge-na{background:#8892a6}
+.view-btn{background:linear-gradient(90deg,var(--indigo),var(--teal));color:#fff}
+.view-btn:hover{color:#fff;opacity:.9}
+
+.roster{border-radius:.6rem;overflow:hidden}
+.roster thead{background:linear-gradient(90deg,var(--indigo),var(--plum))}
+.roster td{color:#eef1f8}
+.topic-pill{background:#fbeecb;color:#7a5a1c;font-weight:700}
+.section-title{color:#fff}
+.section-sub{color:#c9d2e8}
